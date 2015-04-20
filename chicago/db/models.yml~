@@ -2,8 +2,12 @@ Place
   title: string
   photoURL: string
   admission: integer
-  description: string
+  description: text
 
+Review
+  title: string
+  rating: integer
+  description: string
 
 
 # Example table for a typical Book model.

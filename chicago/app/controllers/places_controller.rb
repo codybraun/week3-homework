@@ -6,7 +6,9 @@ class PlacesController < ApplicationController
   end  
   
   def show
+    @id = params["id"]
     @place = Place.find_by(:id => params["id"])
+    @reviews = @place.reviews
     render "show"
   end
   
@@ -20,5 +22,18 @@ class PlacesController < ApplicationController
   def new
     render "new"
   end
+  
+  def create
+    Place.create(title: params["title"], description: params["description"], admission: params["admission"], photoURL: params["photoURL"])
+    @places = Place.all
+    render "index"
+  end
+  
+  def review
+     place = Place.find_by(:id => params["id"])
+     place.reviews.create(title: params["title"], description: params["description"], rating: params["rating"])
+     @places = Place.all
+     render "index"
+   end
   
 end
