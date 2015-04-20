@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	background-color:beige;
+}
+
+.placeImg{
+	height: 200px;
+}
+
+.placeDiv{
+	border-radius: 10px;  
+	background-color:#99FFCC;
+	padding:10px;
+	margin: 10px;
+}
+
+.right-info{
+	float:right;
+	padding:10px;
+	}
+	
+	
+}
+}
