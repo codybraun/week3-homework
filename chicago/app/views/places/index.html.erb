@@ -5,7 +5,7 @@
     <img class= "placeImg" src ="<%=place.photoURL%>">
       <%= link_to place.title, "/places/#{place.id}" %>
       <div class="right-info">
-      	Admission: $<%=place.admission%><br>
+      	Admission: <%=number_to_currency(place.admission/100.00)%><br>
       	<%= link_to "DELETE", "/places/#{place.id}/delete" %>
       </div>
     </div>

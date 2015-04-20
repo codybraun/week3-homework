@@ -1,5 +1,5 @@
 <div class="row-fluid">
-<h2><%=@place.title%></h2>
+<h2><%=@place.title%> <%= link_to "(EDIT)", "/places/#{@place.id}/edit" %></h2>
 <div class="col-md-4">
 <img style="float:left;" class="placeImg" src="<%=@place.photoURL%>">
 </div>

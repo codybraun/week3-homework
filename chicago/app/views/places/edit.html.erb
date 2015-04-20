@@ -1,0 +1,19 @@
+<br>
+<div class="row col-md-6 col-md-offset-3">
+<form class="form-horizontal" action="/places/<%=@place.id%>/update/">
+<label>Location title:</label><br>
+
+<input class="form-control" type="text" name="title" value="<%=@place.title%>">
+<br><br>
+<label>Image URL:</label><br>
+<input class="form-control" type="text" name="photoURL" value="<%=@place.photoURL%>">
+<br><br>
+<label>Description:</label><br>
+<input class="form-control" type="text" name="description" value="<%=@place.description%>">
+<br><br>
+<label>Price in cents:</label><br>
+<input class="form-control" type="text" name="admission" value="<%=@place.admission%>">
+<br><br>
+<button class="form-control">Submit</button>
+</form>
+</div>

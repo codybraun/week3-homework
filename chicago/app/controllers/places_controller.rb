@@ -35,5 +35,21 @@ class PlacesController < ApplicationController
      @places = Place.all
      render "index"
    end
+   
+  def update
+     place = Place.find_by(:id => params["id"])
+     place.title= params["title"]
+     place.description= params["description"]
+     place.admission= params["admission"]
+     place.photoURL= params["photoURL"]
+     place.save
+     @places = Place.all
+     render "index"
+   end
+   
+  def edit
+     @place = Place.find_by(:id => params["id"])
+     render "edit"
+   end
   
 end
